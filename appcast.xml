@@ -1,27 +1,24 @@
-<?xml version="1.0" standalone="yes"?>
-<!-- sparkle-sign-warning:
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
--->
-<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>个人知识库</title>
         <item>
-            <title>0.3.0-beta.2</title>
-            <pubDate>Sat, 26 Sep 2026 09:54:30 +0800</pubDate>
-            <sparkle:version>3002</sparkle:version>
-            <sparkle:shortVersionString>0.3.0-beta.2</sparkle:shortVersionString>
+            <title>0.3.0-beta.3</title>
+            <pubDate>Sat, 26 Sep 2026 11:18:46 +0800</pubDate>
+            <sparkle:version>3003</sparkle:version>
+            <sparkle:shortVersionString>0.3.0-beta.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<h2>0.3.0-beta.2 · 应用内升级验证版</h2>
-<p>用于验证从更新器首版完成公开签名更新、数据库备份和重启后的知识库连续性。</p>
-<p>文献、Claim、学习笔记及本地设置保持在原数据目录。升级前请保存编辑中的笔记，等待当前任务完成。</p>
-<p>Apple Silicon，macOS 14 或更新；ad-hoc 签名，系统仍可能要求手动允许打开。</p>
+            <description><![CDATA[<h2>0.3.0-beta.3 · 更新器验证版</h2>
+<p>已验证公开签名更新、安装前任务等待与取消、SQLite 备份、重启后文献和学习笔记保留。</p>
+<p>新增安装期间防止旧应用再次启动的保护；手动检查失败提示会等待确认。最低声明 macOS 14，实际验收 macOS 15.6.1 Apple Silicon。</p>
+<p>r5 用户请手动安装本版。未 notarize，首次打开可能需要手动允许。正常下载隔离属性及 macOS 14 实机验证尚在进行。</p>
 ]]></description>
-            <enclosure url="https://github.com/echoechofu/research-graph-beta/releases/download/b3002/ResearchGraph-3002-arm64.zip" length="40641966" type="application/octet-stream" sparkle:edSignature="Iw0BXHarbH+UgzJ3CF8b3JOvbATCN6RXDjNEjj1Bj4lLyuqYO2YpQvyRCZDTdciGpOFlixNrL+U3sY0S4cRrDQ=="/>
+            <enclosure url="https://github.com/echoechofu/research-graph-beta/releases/download/b3003/ResearchGraph-3003-arm64.zip" length="40644637" type="application/octet-stream" sparkle:edSignature="ZOrNXBsNaRpDDco/18d0QNk6zxKmG11nprGf5CrUSQLfJMmOSx4J+SCpHSgkiJkrvHlou9JtXve/LA0XxecwDw=="></enclosure>
         </item>
     </channel>
-</rss>
-<!-- sparkle-signatures:
-edSignature: 0j3wsjBfwvh++ZUqkdlnacaG+E35C2csX2E0zomEpZI5OV5j45923t2tTit4sxDkfqvYxaBZ+1uQdQEdrryDDw==
-length: 1625
+</rss><!-- sparkle-signatures:
+edSignature: M4lPayA8ZmhMf+6SoV8BDn6UdD6fp0qnrmGLM095w3Gfy7ljmFOZ7x01YSkXCAwnq+ZPCpZ9SHIZPe/3vtWrBg==
+length: 1721
 -->
