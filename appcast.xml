@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>个人知识库</title>
+        <item>
+            <title>0.3.0-beta.1</title>
+            <pubDate>Sat, 26 Sep 2026 09:50:08 +0800</pubDate>
+            <sparkle:version>3001</sparkle:version>
+            <sparkle:shortVersionString>0.3.0-beta.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description><![CDATA[<h2>0.3.0-beta.1 · 更新器首版</h2>
+<p>新增原生更新窗口、设置页版本信息、启动时检查开关，以及安装前任务等待与数据库备份。</p>
+<p>r5 用户需要手动安装此版本。Apple Silicon，macOS 14 或更新。首次打开可能需要系统设置中手动允许；未使用 Developer ID 或 notarization。</p>
+<p>Beta 更新链正在验收，请保留知识库备份。下载与重启均需确认；取消等待会恢复后台任务。</p>
+]]></description>
+            <enclosure url="https://github.com/echoechofu/research-graph-beta/releases/download/b3001/ResearchGraph-3001-arm64.zip" length="40639669" type="application/octet-stream" sparkle:edSignature="Ysu7JSDSHXQ3SfeXV8QsezdElUjtoZjbcPq21z9O54Syuv9v2LBOw1ZELykVAXVPUccNTarmYfxs4p6PWj9CAA=="></enclosure>
+        </item>
+    </channel>
+</rss><!-- sparkle-signatures:
+edSignature: vS9m4OjSKPmL0Ihj1255iLL1fpczxUAJ32HiPJw+7CiTvQsvHgKLgI2mAgEqAL9v3vr2Yc1oISW8SdBV2cTtAA==
+length: 1701
+-->
