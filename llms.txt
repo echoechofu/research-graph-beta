@@ -14,6 +14,7 @@ Platform: Apple Silicon macOS. Package declares macOS 14+; tested on macOS 15.6.
 - [中文介绍](https://github.com/echoechofu/research-graph-beta/blob/main/README.md): 功能、安装、数据流与当前边界。
 - [English overview](https://github.com/echoechofu/research-graph-beta/blob/main/README.en.md): Capabilities, installation, data flow, and current limitations.
 - [Release history](https://github.com/echoechofu/research-graph-beta/releases): Installers and release notes.
+- [Journal data notice](https://github.com/echoechofu/research-graph-beta/blob/main/data/jcr/README.md): Supported JCR2025 CSV structure, hitfyd/ShowJCR acknowledgment, import steps, and rights notice. This repository does not mirror the dataset.
 
 ## Available capabilities
 
@@ -30,7 +31,7 @@ Platform: Apple Silicon macOS. Package declares macOS 14+; tested on macOS 15.6.
 
 ## Current boundaries
 
-No vector semantic retrieval, open-ended knowledge-base chat, unattended scheduled monitoring, full-text analysis pipeline, automatic scientific truth adjudication, or combined evidence score is currently advertised. PubMed is the current literature source. JCR data and model credits are not bundled. Initial manual macOS approval may be required because the app is ad-hoc signed and not notarized. AI outputs require source checking.
+No vector semantic retrieval, open-ended knowledge-base chat, unattended scheduled monitoring, full-text analysis pipeline, automatic scientific truth adjudication, or combined evidence score is currently advertised. PubMed is the current literature source. JCR data and model credits are not bundled. A journal CSV setup guide is available; users supply data they are entitled to use. Initial manual macOS approval may be required because the app is ad-hoc signed and not notarized. AI outputs require source checking.
 
 ## 中文摘要
 

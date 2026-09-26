@@ -8,7 +8,7 @@ After you approve the scope, the app builds a searchable, traceable claim-level 
 
 [简体中文](README.md) · [Download the latest Beta](https://github.com/echoechofu/research-graph-beta/releases/latest) · [Release history](https://github.com/echoechofu/research-graph-beta/releases) · [Report an issue](https://github.com/echoechofu/research-graph-beta/issues)
 
-> This is the public **Beta distribution repository** for installers, the update feed, and release notes. It does not contain application source code, user data, API keys, or JCR datasets. Public distribution does not imply an open-source license.
+> This is the public **Beta distribution repository** for installers, the update feed, release notes, and journal data setup instructions. It does not contain application source code, user data, API keys, or JCR data snapshots. Public distribution does not imply an open-source license.
 
 ## What can you use it for?
 
@@ -64,6 +64,14 @@ Current release: **0.3.0-beta.3 · build 3003**.
 5. Create a knowledge base, confirm its scope, preview papers, and start building. Browse and search claims once the build completes.
 
 No Intel Mac, Windows, or Linux installers are currently available. Users of r5 and earlier must manually install an updater-enabled release once before using in-app updates.
+
+### Journal CSV source and import
+
+See the [journal data setup guide](data/jcr/README.md) for the supported CSV format and third-party source. After obtaining a CSV you are entitled to use, open Settings and choose “Import journal CSV.”
+
+**Thanks to [hitfyd/ShowJCR](https://github.com/hitfyd/ShowJCR) for the third-party data preparation and source reference.** The app supports its `JCR2025-UTF8.csv` structure. This repository does not mirror the dataset or promise synchronization with upstream changes.
+
+This project is intended for personal learning and research and grants no commercial-use rights to third-party data. Rights remain with their respective holders. Attribution, acknowledgments, and personal-use notices do not replace applicable licenses. Users must confirm compliance with applicable terms. This project is not affiliated with or endorsed by Clarivate.
 
 ## Local storage and external requests
 

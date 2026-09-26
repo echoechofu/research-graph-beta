@@ -8,7 +8,7 @@
 
 [English](README.en.md) · [下载最新 Beta](https://github.com/echoechofu/research-graph-beta/releases/latest) · [版本记录](https://github.com/echoechofu/research-graph-beta/releases) · [反馈问题](https://github.com/echoechofu/research-graph-beta/issues)
 
-> 本仓库是公开 **Beta 分发仓库**，提供安装包、更新清单与版本说明；不包含应用源码、用户数据、API 密钥或 JCR 数据。公开分发不代表开源许可。
+> 本仓库是公开 **Beta 分发仓库**，提供安装包、更新清单、版本说明及期刊数据配置说明；不包含应用源码、用户数据、API 密钥或 JCR 数据快照。公开分发不代表开源许可。
 
 ## 它能帮你做什么？
 
@@ -64,6 +64,14 @@
 5. 创建知识库，确认研究范围，预览并开始构建；完成后即可浏览与检索 Claim。
 
 目前不提供 Intel Mac、Windows 或 Linux 安装包。r5 及更早版本需要手动安装一次带更新器的版本，之后可使用应用内更新。
+
+### 期刊分区 CSV 来源与导入
+
+首次配置可参考 [期刊数据配置说明](data/jcr/README.md)，了解当前适配的 CSV 格式与第三方来源。取得有权使用的 CSV 后，在应用“设置”中点击“导入期刊 CSV”，选择该文件即可。
+
+**感谢 [hitfyd/ShowJCR](https://github.com/hitfyd/ShowJCR) 提供第三方数据整理与来源参考。** 当前应用适配其 `JCR2025-UTF8.csv` 结构；本仓库不镜像该数据文件，不承诺与上游最新版本同步。
+
+本项目面向个人学习与研究，不提供第三方数据的商业用途授权。相关权利归各自权利人；来源署名、致谢和“个人使用”声明不替代适用许可。用户需确认其使用符合适用条款。本项目不隶属于 Clarivate，也不表示获得其认可。
 
 ## 本地数据与外部调用
 
