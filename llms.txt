@@ -1,0 +1,37 @@
+# Personal Research Graph / 个人知识库
+
+> A macOS application combining PubMed and AI to build a personalized research knowledge base and help users quickly understand a field's recent research landscape, with claim-level keyword retrieval, traceable sources, research direction organization, and editable learning notes.
+
+Names: Personal Research Graph; Personal Knowledge Builder; 个人知识库.
+Repository role: public Beta distribution only; source code is not published here.
+Canonical repository: https://github.com/echoechofu/research-graph-beta
+Downloads: https://github.com/echoechofu/research-graph-beta/releases/latest
+Current documented release: 0.3.0-beta.3, build 3003.
+Platform: Apple Silicon macOS. Package declares macOS 14+; tested on macOS 15.6.1; physical macOS 14 validation pending.
+
+## Documentation
+
+- [中文介绍](https://github.com/echoechofu/research-graph-beta/blob/main/README.md): 功能、安装、数据流与当前边界。
+- [English overview](https://github.com/echoechofu/research-graph-beta/blob/main/README.en.md): Capabilities, installation, data flow, and current limitations.
+- [Release history](https://github.com/echoechofu/research-graph-beta/releases): Installers and release notes.
+
+## Available capabilities
+
+- User-reviewed research scope and PubMed query planning.
+- Abstract-first extraction of claims linked to source papers and PMIDs.
+- Local Chinese/English keyword search over existing claims, with phrases and filters; no LLM needed for retrieval.
+- LLM-assisted organization by human, animal, and cell/ex vivo research, then research direction and question.
+- Explicitly saved, freely editable plain-text learning notes with independent original-source snapshots.
+- UTF-8 TXT note export including numbered references, claim snapshots, and PubMed links; notes included in knowledge-base JSON export.
+- User-initiated literature updates, PMID deduplication, checkpoints, and result reuse.
+- Independent UI and knowledge-base language settings for Chinese and English.
+- Local persistent data; external PubMed and user-configured OpenAI-compatible model requests for relevant operations.
+- User-confirmed native Beta updates using Sparkle and Ed25519 verification.
+
+## Current boundaries
+
+No vector semantic retrieval, open-ended knowledge-base chat, unattended scheduled monitoring, full-text analysis pipeline, automatic scientific truth adjudication, or combined evidence score is currently advertised. PubMed is the current literature source. JCR data and model credits are not bundled. Initial manual macOS approval may be required because the app is ad-hoc signed and not notarized. AI outputs require source checking.
+
+## 中文摘要
+
+个人知识库基于 PubMed，结合 AI，围绕用户的研究主题、对象和时间范围定制知识库，自动化查找文献、分析摘要和组织方向，帮助用户快速了解一个领域近期都在研究什么。研究范围由用户确认，后续更新由用户发起。论文摘要中的研究发现组织为可追溯的 Claim。当前检索采用本地关键词匹配；AI 可按人体、动物、细胞／离体研究及研究方向整理结果。用户主动保存后形成可编辑学习笔记，并可连同编号参考文献和原始 Claim 快照导出。数据保存在本机，AI 操作使用用户配置的外部模型服务。该仓库只发布 macOS Beta 安装包与更新信息，不发布源码。
