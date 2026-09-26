@@ -24,6 +24,30 @@ Useful for exploring a new topic, preparing a lab meeting, mapping research dire
 
 **Describe a topic → Review scope and query → Preview papers → Build in batches → Browse / search claims → Organize research directions → Save and edit notes when useful**
 
+## Screenshots from actual use
+
+These screens come from a real local knowledge base built with the current Beta, rather than a conceptual mockup. The example contains 199 papers and 256 claims.
+
+### Knowledge-base overview
+
+![Personal Research Graph overview with research scope, literature-update status, and claim search](assets/screenshots/knowledge-base-overview-zh.png)
+
+### Browse by study population and direction
+
+![Research-direction map for the Emotion topic, with its scope, directions, paper count, and finding count](assets/screenshots/research-directions.png)
+
+### Claim-level keyword retrieval
+
+A search for “抑郁” (depression) finds 45 claims from 29 papers and groups them into collapsible human, animal, and unclassified sections.
+
+![Claim-level depression results grouped by study population](assets/screenshots/claim-search-results.png)
+
+### Editable notes with traceable sources
+
+AI-organized results can be saved as a free-text note. Rewrite the body while retaining a separate snapshot of all 45 source claims, then export the note with its references.
+
+![Learning-note editor with editable text, save controls, and retained source count](assets/screenshots/learning-note-editor.png)
+
 | Capability | Current behavior and benefit |
 | --- | --- |
 | Reviewable research scope | AI drafts boundaries, a PubMed query, and Topics. You review the proposal before building; the app does not autonomously broaden your scope. |
