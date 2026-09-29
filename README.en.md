@@ -83,9 +83,11 @@ Current release: **0.3.0-beta.3 · build 3003**.
 
 1. Download the `arm64.dmg` from the [latest release](https://github.com/echoechofu/research-graph-beta/releases/latest).
 2. Open the DMG, drag the app into **Applications**, and launch it from there.
-3. If macOS blocks the first launch, follow the system prompts to allow it in **System Settings → Privacy & Security**. This Beta uses ad-hoc signing without Developer ID or notarization; manual first-launch approval is part of the current installation process. See [Apple's instructions](https://support.apple.com/en-us/102445).
+3. If macOS blocks the first launch, close the warning and open **System Settings → Privacy & Security**. Scroll down to the message saying that Personal Knowledge Builder was blocked, click **Open Anyway**, authenticate with your password or Touch ID, and then confirm **Open** in the next dialog. This Beta uses ad-hoc signing without Developer ID or notarization; manual first-launch approval is part of the current installation process. You do not need to disable Gatekeeper. See [Apple's instructions](https://support.apple.com/en-us/102445).
 4. When the local browser interface opens, configure your model service and the required literature filtering settings.
 5. Create a knowledge base, confirm its scope, preview papers, and start building. Browse and search claims once the build completes.
+
+> **Allow time for the first plan:** After clicking **Create and generate plan** for the first time, the app must create the local knowledge base and ask the AI service for the complete plan. The page may not change immediately. Click the button only once and wait for the result; do not click **Create and generate plan** repeatedly.
 
 No Intel Mac, Windows, or Linux installers are currently available. Users of r5 and earlier must manually install an updater-enabled release once before using in-app updates.
 

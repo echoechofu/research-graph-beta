@@ -83,9 +83,11 @@ AI 整理结果可保存为自由文本笔记。正文可以改写，保存时�
 
 1. 从 [最新发布页](https://github.com/echoechofu/research-graph-beta/releases/latest) 下载 `arm64.dmg`。
 2. 打开 DMG，将应用拖入 **Applications／应用程序**，再从该目录启动。
-3. 首次打开如被 macOS 拦截，按系统提示在“系统设置 → 隐私与安全性”中允许打开。应用使用 ad-hoc 签名，未使用 Developer ID 或 notarization；首次手动放行属于当前 Beta 安装流程。参见 [Apple 官方说明](https://support.apple.com/en-us/102445)。
+3. 首次打开如被 macOS 拦截，先关闭拦截提示，再打开“系统设置 → 隐私与安全性”，向下找到“个人知识库”被阻止的提示，点击“仍要打开”，完成密码或 Touch ID 验证后，在再次弹出的窗口中确认“打开”。应用使用 ad-hoc 签名，未使用 Developer ID 或 notarization；首次手动放行属于当前 Beta 安装流程。不需要关闭 Gatekeeper，参见 [Apple 官方说明](https://support.apple.com/en-us/102445)。
 4. 浏览器打开本地工作界面后，在设置中填写模型配置及所需的文献筛选配置。
 5. 创建知识库，确认研究范围，预览并开始构建；完成后即可浏览与检索 Claim。
+
+> **首次生成时请稍等：** 第一次点击“创建并生成方案”后，应用需要先创建本地知识库并请求 AI 生成完整方案，页面可能不会立即变化。请只点击一次并等待结果，不要重复点击“创建并生成方案”。
 
 目前不提供 Intel Mac、Windows 或 Linux 安装包。r5 及更早版本需要手动安装一次带更新器的版本，之后可使用应用内更新。
 
