@@ -4,21 +4,38 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>个人知识库</title>
         <item>
-            <title>0.3.0-beta.3</title>
-            <pubDate>Sat, 26 Sep 2026 11:18:46 +0800</pubDate>
-            <sparkle:version>3003</sparkle:version>
-            <sparkle:shortVersionString>0.3.0-beta.3</sparkle:shortVersionString>
+            <title>0.3.0-beta.4</title>
+            <pubDate>Fri, 23 Oct 2026 22:22:12 +0800</pubDate>
+            <sparkle:version>3004</sparkle:version>
+            <sparkle:shortVersionString>0.3.0-beta.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<h2>0.3.0-beta.3 · 更新器验证版</h2>
-<p>已验证公开签名更新、安装前任务等待与取消、SQLite 备份、重启后文献和学习笔记保留。</p>
-<p>新增安装期间防止旧应用再次启动的保护；手动检查失败提示会等待确认。最低声明 macOS 14，实际验收 macOS 15.6.1 Apple Silicon。</p>
-<p>r5 用户请手动安装本版。未 notarize，首次打开可能需要手动允许。正常下载隔离属性及 macOS 14 实机验证尚在进行。</p>
+            <description><![CDATA[<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>个人知识库 0.3.0-beta.4</title></head>
+<body>
+<h1>个人知识库 0.3.0-beta.4（build 3004）</h1>
+<p>2026 年 10 月 23 日 · 检索方案更新与错误提示修复</p>
+<ul>
+<li><strong>检索式更新更可靠：</strong>与助手对话后生成一条完整的新版检索式，替换原输入。若模型把旧、新检索式或多个方案一起返回，应用会要求纠正一次；仍不合格则提示重新生成并保留当前内容。新方案仍需预览并由你确认应用。</li>
+<li><strong>内容审核提示更准确：</strong>模型服务明确返回 input/output new_sensitive 时，说明输入或模型输出被内容审核拒绝，并保留已保存进度。在文献分析阶段，可手动跳过失败文献后继续；无需因此反复修改密钥或额度设置。</li>
+<li><strong>安装包补齐运行依赖：</strong>补入 Python 运行时需要的证书策略文件，避免请求模型服务前因文件缺失而失败，保留原有证书验证。</li>
+</ul>
+<p>更新前请保存正在编辑的笔记。应用内更新会等待后台任务结束，备份数据库后再安装；也可退出应用后从发布页下载安装包，替换 Applications 中的应用。知识库继续使用原本地数据目录。</p>
+<p>支持 Apple Silicon Mac；安装包声明 macOS 14+，实际验证环境为 macOS 15.6.1。Beta 使用 ad-hoc 签名，首次打开可能需要在系统设置中手动允许。</p>
+<h2>English</h2>
+<ul>
+<li>Conversational plan revisions return one complete replacement query. Old/new alternatives are rejected and corrected once; persistent invalid output leaves the current draft intact. Preview and explicit application are still required.</li>
+<li>Explicit input/output new_sensitive responses now identify provider content moderation and explain manual skip-and-continue recovery during paper analysis.</li>
+<li>The package includes the Python runtime's required certificate-policy file while preserving certificate verification.</li>
+</ul>
+</body>
+</html>
 ]]></description>
-            <enclosure url="https://github.com/echoechofu/research-graph-beta/releases/download/b3003/ResearchGraph-3003-arm64.zip" length="40644637" type="application/octet-stream" sparkle:edSignature="ZOrNXBsNaRpDDco/18d0QNk6zxKmG11nprGf5CrUSQLfJMmOSx4J+SCpHSgkiJkrvHlou9JtXve/LA0XxecwDw=="></enclosure>
+            <enclosure url="https://github.com/echoechofu/research-graph-beta/releases/download/b3004/ResearchGraph-3004-arm64.zip" length="40669441" type="application/octet-stream" sparkle:edSignature="McQ+T2rIU1TpLhJ+iSGscwrJb5eTWdkBsGjVjacR9lkEM+0LrN0G7cc8ebvWcV+vduSFvqjet0YTm/iVT1TXAA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: M4lPayA8ZmhMf+6SoV8BDn6UdD6fp0qnrmGLM095w3Gfy7ljmFOZ7x01YSkXCAwnq+ZPCpZ9SHIZPe/3vtWrBg==
-length: 1721
+edSignature: Os7dSjDYipRpHIAK7h6qVOp9cVJxEMbA3sywUDi2xVmjfkZ74QeoJfwN4VkR1d9gdfSQPb+RGEUWDmUe2FQrDg==
+length: 3316
 -->

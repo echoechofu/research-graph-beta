@@ -2,11 +2,13 @@
 
 **基于 PubMed，结合 AI，建立你的个人定制研究知识库，快速了解一个领域近期都在研究什么。**
 
-个人知识库（Personal Research Graph，也称 Personal Knowledge Builder）是一款面向科研阅读与知识积累的 macOS 应用。围绕你关心的主题、研究对象与时间范围，它结合 PubMed 文献发现和 AI 分析，自动化完成从查找论文、提取研究发现到组织研究方向的工作，帮助你更快看清近期研究在问什么、发现了什么、还有哪些局限。
+科研检索通常得到一份论文列表，而研究发现、适用对象、研究局限和出处分散在摘要与阅读笔记中。想了解“这个领域近期都在研究什么”，往往需要反复检索、阅读和人工分类；新增文献后，还要辨认哪些已经处理过，并维护个人整理与原始来源的对应关系。
 
-你确认研究范围后，应用分批建立可检索、可追溯的 Claim（研究发现）知识库；需要时再检查新增文献，并把整理结果沉淀为可编辑、带参考文献的学习笔记。每个知识库围绕你的问题定制，而不是预设的一套通用研究摘要。
+个人知识库（Personal Research Graph，也称 Personal Knowledge Builder）是一款面向科研阅读与知识积累的 macOS 应用。围绕你确认的主题、研究对象与时间范围，它结合 PubMed 文献发现和 AI 摘要分析，把研究发现、研究对象、局限与来源关联保存，再按研究对象和研究问题组织方向地图。你可以先看领域近期在研究什么，再展开具体 Claim（研究发现），沿引用回到原论文核对。
 
-[English](README.en.md) · [下载最新 Beta](https://github.com/echoechofu/research-graph-beta/releases/latest) · [版本记录](https://github.com/echoechofu/research-graph-beta/releases) · [反馈问题](https://github.com/echoechofu/research-graph-beta/issues)
+后续由你发起文献更新，应用按 PMID 去重并复用已完成分析与有效检查点，减少重复处理，同时保留人工分类、文献排除与已保存笔记。整理结果可以保存为学习笔记，自由改写正文，原始研究发现与出处快照独立保留，让长期积累持续有据可查。
+
+[English](README.en.md) · [下载当前 Beta](https://github.com/echoechofu/research-graph-beta/releases/tag/b3004) · [版本记录](https://github.com/echoechofu/research-graph-beta/releases) · [反馈问题](https://github.com/echoechofu/research-graph-beta/issues)
 
 > 本仓库是公开 **Beta 分发仓库**，提供安装包、更新清单、版本说明及期刊数据配置说明；不包含应用源码、用户数据、API 密钥或 JCR 数据快照。公开分发不代表开源许可。
 
@@ -51,7 +53,7 @@ AI 整理结果可保存为自由文本笔记。正文可以改写，保存时�
 | 能力 | 当前实现与价值 |
 | --- | --- |
 | 研究范围可控 | AI 起草研究边界、PubMed 检索式和 Topic；用户审阅后构建，避免把研究范围交给自动扩展。 |
-| Claim 级知识组织 | 从摘要提取研究发现，保留论文关联；可沿发现回到来源，而不只获得论文标题列表。 |
+| Claim 级知识组织 | 从摘要提取研究发现，关联研究对象、局限与来源论文；可沿每条发现回到原文核对。 |
 | 本地关键词检索 | 支持中英文关键词、引号短语、全部词／任一词匹配，以及 Topic、研究对象和年份筛选。已建知识库的检索不需要模型或向量服务。 |
 | 研究方向整理 | “帮我整理”使用配置的 LLM，整理当前筛选范围内的 Claim；先分研究对象，再分研究方向与问题。默认折叠卡片，按需展开。 |
 | 可编辑学习笔记 | 只有主动保存才产生笔记。正文可自由编辑，引用编号、原始 Claim、来源论文和 PMID 作为独立来源快照保留。 |
@@ -71,7 +73,12 @@ AI 整理结果可保存为自由文本笔记。正文可以改写，保存时�
 
 ## 安装与开始使用
 
-当前版本：**0.3.0-beta.3 · build 3003**。
+当前版本：**0.3.0-beta.4 · build 3004**。
+
+本次更新改善了两处使用反馈：
+
+- **对话后更新检索式：** 重新生成的方案使用一条完整检索式替换输入框中的旧内容。模型持续返回多段检索式或未通过格式检查的内容时，保留当前输入并提示重新生成，避免把旧、新检索式拼接后用于检索。
+- **内容审核拒绝的说明：** 识别 `input new_sensitive (1026)` 和 `output new_sensitive (1027)`，分别说明输入或模型输出被服务商的内容审核拒绝，并提示已保存进度保留。若发生在文献分析阶段，可手动跳过失败文献后继续。
 
 | 项目 | 要求 |
 | --- | --- |
@@ -81,7 +88,7 @@ AI 整理结果可保存为自由文本笔记。正文可以改写，保存时�
 | AI 配置 | 用户提供 OpenAI 兼容服务地址、模型名称和 API Key；不内置模型或模型额度 |
 | 本地数据 | `~/Library/Application Support/Personal Research Graph` |
 
-1. 从 [最新发布页](https://github.com/echoechofu/research-graph-beta/releases/latest) 下载 `arm64.dmg`。
+1. 从 [当前 Beta 发布页](https://github.com/echoechofu/research-graph-beta/releases/tag/b3004) 下载 `arm64.dmg`。
 2. 打开 DMG，将应用拖入 **Applications／应用程序**，再从该目录启动。
 3. 首次打开如被 macOS 拦截，先关闭拦截提示，再打开“系统设置 → 隐私与安全性”，向下找到“个人知识库”被阻止的提示，点击“仍要打开”，完成密码或 Touch ID 验证后，在再次弹出的窗口中确认“打开”。应用使用 ad-hoc 签名，未使用 Developer ID 或 notarization；首次手动放行属于当前 Beta 安装流程。不需要关闭 Gatekeeper，参见 [Apple 官方说明](https://support.apple.com/en-us/102445)。
 4. 浏览器打开本地工作界面后，在设置中填写模型配置及所需的文献筛选配置。

@@ -2,11 +2,13 @@
 
 > A macOS application combining PubMed and AI to build a personalized research knowledge base and help users quickly understand a field's recent research landscape, with claim-level keyword retrieval, traceable sources, research direction organization, and editable learning notes.
 
+Problem addressed: paper lists leave findings, study subjects, limitations, and sources scattered across abstracts and reading notes. The app links these elements and organizes research directions so users can explore recent work and inspect its sources. User-initiated updates reuse completed analyses and valid checkpoints while preserving manual organization, paper exclusions, and saved notes with independent source snapshots.
+
 Names: Personal Research Graph; Personal Knowledge Builder; 个人知识库.
 Repository role: public Beta distribution only; source code is not published here.
 Canonical repository: https://github.com/echoechofu/research-graph-beta
-Downloads: https://github.com/echoechofu/research-graph-beta/releases/latest
-Current documented release: 0.3.0-beta.3, build 3003.
+Downloads: https://github.com/echoechofu/research-graph-beta/releases/tag/b3004
+Current documented release: 0.3.0-beta.4, build 3004.
 Platform: Apple Silicon macOS. Package declares macOS 14+; tested on macOS 15.6.1; physical macOS 14 validation pending.
 
 ## Documentation
@@ -19,15 +21,20 @@ Platform: Apple Silicon macOS. Package declares macOS 14+; tested on macOS 15.6.
 ## Available capabilities
 
 - User-reviewed research scope and PubMed query planning.
-- Abstract-first extraction of claims linked to source papers and PMIDs.
+- Abstract-first extraction of claims linked to study subjects, limitations, source papers, and PMIDs.
 - Local Chinese/English keyword search over existing claims, with phrases and filters; no LLM needed for retrieval.
 - LLM-assisted organization by human, animal, and cell/ex vivo research, then research direction and question.
 - Explicitly saved, freely editable plain-text learning notes with independent original-source snapshots.
 - UTF-8 TXT note export including numbered references, claim snapshots, and PubMed links; notes included in knowledge-base JSON export.
-- User-initiated literature updates, PMID deduplication, checkpoints, and result reuse.
+- User-initiated literature updates, PMID deduplication, checkpoints, and result reuse, preserving manual topic organization, paper exclusions, and saved notes.
 - Independent UI and knowledge-base language settings for Chinese and English.
 - Local persistent data; external PubMed and user-configured OpenAI-compatible model requests for relevant operations.
 - User-confirmed native Beta updates using Sparkle and Ed25519 verification.
+
+## Changes in 0.3.0-beta.4
+
+- Regenerated search plans replace the query field with one complete query. If the model keeps returning multiple queries or content that fails the format checks, the app retains the current input and asks the user to regenerate.
+- Content moderation messages recognize input new_sensitive (1026) and output new_sensitive (1027), identify input versus output rejection, and explain that saved progress is retained. During paper analysis, users can manually skip the failed paper and continue.
 
 ## Current boundaries
 
@@ -35,4 +42,4 @@ No vector semantic retrieval, open-ended knowledge-base chat, unattended schedul
 
 ## 中文摘要
 
-个人知识库基于 PubMed，结合 AI，围绕用户的研究主题、对象和时间范围定制知识库，自动化查找文献、分析摘要和组织方向，帮助用户快速了解一个领域近期都在研究什么。研究范围由用户确认，后续更新由用户发起。论文摘要中的研究发现组织为可追溯的 Claim。当前检索采用本地关键词匹配；AI 可按人体、动物、细胞／离体研究及研究方向整理结果。用户主动保存后形成可编辑学习笔记，并可连同编号参考文献和原始 Claim 快照导出。数据保存在本机，AI 操作使用用户配置的外部模型服务。该仓库只发布 macOS Beta 安装包与更新信息，不发布源码。
+科研检索通常得到论文列表，研究发现、适用对象、局限与出处分散在摘要和阅读笔记中。个人知识库基于 PubMed，结合 AI，围绕用户确认的主题、研究对象和时间范围，将这些内容关联为可追溯的 Claim，并按人体、动物、细胞／离体研究及研究问题组织方向地图，帮助用户了解领域近期在研究什么。后续更新由用户发起，按 PMID 去重并复用已完成分析与有效检查点，保留人工分类、文献排除和已保存笔记。当前检索采用本地关键词匹配；主动保存的学习笔记可自由编辑，原始发现与出处快照独立保留，并可连同编号参考文献导出。beta.4 改善对话后检索式替换，模型持续返回多段检索式或未通过格式检查的内容时保留当前输入；明确说明输入或模型输出的内容审核拒绝，文献分析阶段可手动跳过失败文献后继续。数据保存在本机，AI 操作使用用户配置的外部模型服务。该仓库只发布 macOS Beta 安装包与更新信息，不发布源码。

@@ -2,11 +2,13 @@
 
 **Build a personalized research knowledge base with PubMed and AI, and quickly understand what a field has been studying recently.**
 
-Personal Research Graph (also called Personal Knowledge Builder) is a macOS app for scientific reading and personal knowledge management. Tailored to your topic, study population, and date range, it combines PubMed discovery with AI analysis to automate paper discovery, finding extraction, and research direction organization—helping you see what recent studies ask, what they find, and where their limitations lie.
+Literature searches usually return a list of papers, while findings, study populations or models, limitations, and sources remain scattered across abstracts and reading notes. Understanding what a field has been studying recently takes repeated searching, reading, and manual classification. As new papers arrive, you also need to identify work already processed and keep your own organization connected to its original sources.
 
-After you approve the scope, the app builds a searchable, traceable claim-level knowledge base in batches. Check for new papers when needed and turn organized results into editable learning notes with references. Each knowledge base is shaped around your questions rather than a predefined general research digest.
+Personal Research Graph (also called Personal Knowledge Builder) is a macOS app for scientific reading and personal knowledge management. Within your approved topic, study population or model, and date range, it combines PubMed discovery with AI abstract analysis to store findings together with their study subjects, limitations, and sources. It organizes them by study subject and research question, so you can explore recent research directions, expand individual claims, and follow citations back to the original papers.
 
-[简体中文](README.md) · [Download the latest Beta](https://github.com/echoechofu/research-graph-beta/releases/latest) · [Release history](https://github.com/echoechofu/research-graph-beta/releases) · [Report an issue](https://github.com/echoechofu/research-graph-beta/issues)
+When you choose to update the literature, PMID deduplication and reuse of completed analyses and valid checkpoints reduce repeated processing. Manual topic organization, paper exclusions, and saved notes are preserved. Save organized results as a learning note and rewrite its text freely while retaining separate snapshots of the original findings and sources, keeping your growing collection traceable.
+
+[简体中文](README.md) · [Download the current Beta](https://github.com/echoechofu/research-graph-beta/releases/tag/b3004) · [Release history](https://github.com/echoechofu/research-graph-beta/releases) · [Report an issue](https://github.com/echoechofu/research-graph-beta/issues)
 
 > This is the public **Beta distribution repository** for installers, the update feed, release notes, and journal data setup instructions. It does not contain application source code, user data, API keys, or JCR data snapshots. Public distribution does not imply an open-source license.
 
@@ -51,7 +53,7 @@ AI-organized results can be saved as a free-text note. Rewrite the body while re
 | Capability | Current behavior and benefit |
 | --- | --- |
 | Reviewable research scope | AI drafts boundaries, a PubMed query, and Topics. You review the proposal before building; the app does not autonomously broaden your scope. |
-| Claim-level organization | Findings extracted from abstracts retain paper associations, so you can navigate from a finding to its source. |
+| Claim-level organization | Findings extracted from abstracts remain linked to their study subjects, limitations, and source papers, so you can check each finding against its source. |
 | Local keyword retrieval | Chinese and English keywords, quoted phrases, all-term / any-term matching, and Topic, study population, and year filters. Searching an existing knowledge base requires no model or vector service. |
 | Research direction clustering | “Organize these results” uses your configured LLM to organize claims in the current filtered result set by study population, then research direction and question. Cards start collapsed and expand on demand. |
 | Editable learning notes | Notes are created only when you choose to save. Edit their titles and text freely; citation numbers, original claims, paper information, and PMIDs remain in a separate source snapshot. |
@@ -71,7 +73,12 @@ Review the research boundaries, adjust Topics, and exclude papers. Manual adjust
 
 ## Install and get started
 
-Current release: **0.3.0-beta.3 · build 3003**.
+Current release: **0.3.0-beta.4 · build 3004**.
+
+This update addresses two reported issues:
+
+- **Query revisions after conversation:** A regenerated plan replaces the old text in the query field with one complete query. If the model keeps returning multiple queries or content that fails the format checks, the current input is retained and the app asks you to regenerate, preventing old and new queries from being appended together for retrieval.
+- **Content moderation messages:** The app recognizes `input new_sensitive (1026)` and `output new_sensitive (1027)`, explains whether the provider rejected the input or model output during content moderation, and confirms that saved progress is retained. If this occurs during paper analysis, you can manually skip the failed paper and continue.
 
 | Item | Requirement |
 | --- | --- |
@@ -81,7 +88,7 @@ Current release: **0.3.0-beta.3 · build 3003**.
 | AI setup | Bring an OpenAI-compatible endpoint, model name, and API key. No model or model credits are bundled. |
 | Local data | `~/Library/Application Support/Personal Research Graph` |
 
-1. Download the `arm64.dmg` from the [latest release](https://github.com/echoechofu/research-graph-beta/releases/latest).
+1. Download the `arm64.dmg` from the [current Beta release](https://github.com/echoechofu/research-graph-beta/releases/tag/b3004).
 2. Open the DMG, drag the app into **Applications**, and launch it from there.
 3. If macOS blocks the first launch, close the warning and open **System Settings → Privacy & Security**. Scroll down to the message saying that Personal Knowledge Builder was blocked, click **Open Anyway**, authenticate with your password or Touch ID, and then confirm **Open** in the next dialog. This Beta uses ad-hoc signing without Developer ID or notarization; manual first-launch approval is part of the current installation process. You do not need to disable Gatekeeper. See [Apple's instructions](https://support.apple.com/en-us/102445).
 4. When the local browser interface opens, configure your model service and the required literature filtering settings.
